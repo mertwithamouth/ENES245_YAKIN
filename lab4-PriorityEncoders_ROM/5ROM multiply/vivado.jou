@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 14 15:37:00 2019
+# Process ID: 35488
+# Current directory: C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30500 C:\Users\Mert Akin\Documents\GITHUB\lab4-PriorityEncoders_ROM\5ROM multiply\5rom.xpr
+# Log file: C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply/vivado.log
+# Journal file: C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply/5rom.xpr}
+update_compile_order -fileset sources_1
+close_project
+create_project 5rom {C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply/5rom} -part xc7a100tcsg324-1
+set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+add_files -norecurse {{C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply/rom_multiply.v}}
+add_files -fileset constrs_1 -norecurse {{C:/Users/Mert Akin/Documents/GITHUB/lab4-PriorityEncoders_ROM/5ROM multiply/Nexys4DDR_Master.xdc}}
+update_compile_order -fileset sources_1

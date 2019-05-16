@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/D_ff_sync_reset_behavior.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module D_ff_sync_reset_behavior
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/T_ff_with_D_ff_enable_behavior.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module T_ff_D_ff_enable_behavior
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/Eight_bit_counter_with_D_flop_behavior.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Eight_bit_counter_with_D_flop_behave
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,132 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue May 14 15:31:22 2019
+# Process ID: 42524
+# Current directory: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13052 C:\Users\Mert Akin\Documents\GITHUB\lab8-IntellectualProperty\lab8_1_1\lab8_1_1.xpr
+# Log file: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/vivado.log
+# Journal file: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:20 . Memory (MB): peak = 700.781 ; gain = 122.957
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A6EEBBA
+ERROR: [Labtools 27-2269] No devices detected on target localhost:3121/xilinx_tcf/Digilent/210292A6EEBBA.
+Check cable connectivity and that the target board is powered up then
+use the disconnect_hw_server and connect_hw_server to re-register this hardware target.
+ERROR: [Common 17-39] 'open_hw_target' failed due to earlier errors.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/one_second_clock_behavior.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {800.000} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {1.000} CONFIG.CLKOUT1_JITTER {97.841} CONFIG.CLKOUT1_PHASE_ERROR {114.212}] [get_ips clk_wiz_1]
+generate_target all [get_files  {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_1'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_1] }
+export_ip_user_files -of_objects [get_files {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}] -no_script -sync -force -quiet
+reset_run clk_wiz_1_synth_1
+launch_runs -jobs 4 clk_wiz_1_synth_1
+[Tue May 14 15:38:50 2019] Launched clk_wiz_1_synth_1...
+Run output will be captured here: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/clk_wiz_1_synth_1/runme.log
+export_simulation -of_objects [get_files {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}] -directory {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.ip_user_files} -ipstatic_source_dir {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/modelsim} {questa=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/questa} {riviera=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/one_second_clock_behavior.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue May 14 15:39:22 2019] Launched clk_wiz_1_synth_1, synth_1...
+Run output will be captured here:
+clk_wiz_1_synth_1: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/clk_wiz_1_synth_1/runme.log
+synth_1: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/synth_1/runme.log
+[Tue May 14 15:39:22 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/one_second_clock_behavior.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue May 14 15:50:42 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/one_second_clock_behavior.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/one_second_clock_behavior.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} CONFIG.CLKOUT1_JITTER {631.442} CONFIG.CLKOUT1_PHASE_ERROR {346.848}] [get_ips clk_wiz_1]
+generate_target all [get_files  {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_1'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_1'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_1] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP clk_wiz_1, cache-ID = b46228f37bae2f89; cache size = 0.184 MB.
+catch { [ delete_ip_run [get_ips -all clk_wiz_1] ] }
+INFO: [Project 1-386] Moving file 'C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci' from fileset 'clk_wiz_1' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci'
+export_simulation -of_objects [get_files {{C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci}}] -directory {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.ip_user_files} -ipstatic_source_dir {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/modelsim} {questa=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/questa} {riviera=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/riviera} {activehdl=C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci' is already up-to-date
+[Tue May 14 15:54:24 2019] Launched synth_1...
+Run output will be captured here: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/synth_1/runme.log
+[Tue May 14 15:54:24 2019] Launched impl_1...
+Run output will be captured here: C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_1/lab8_1_1.runs/impl_1/one_second_clock_behavior.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 14 16:14:42 2019...

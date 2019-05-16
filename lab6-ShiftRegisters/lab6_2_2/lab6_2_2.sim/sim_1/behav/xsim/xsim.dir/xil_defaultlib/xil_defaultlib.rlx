@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/D_ff_sync_reset_behavior.v,1552072196,verilog,,C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/T_ff_with_D_ff_enable_behavior.v,,D_ff_sync_reset_behavior,,,,,,,,
+C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/Eight_bit_counter_with_D_flop_behavior.v,1552072196,verilog,,,,Eight_bit_counter_with_D_flop_behave,,,,,,,,
+C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/T_ff_with_D_ff_enable_behavior.v,1552072196,verilog,,C:/Users/Mert Akin/Documents/GITHUB/lab6-ShiftRegisters/lab6_2_2/Eight_bit_counter_with_D_flop_behavior.v,,T_ff_D_ff_enable_behavior,,,,,,,,
