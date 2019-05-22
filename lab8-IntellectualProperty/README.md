@@ -4,9 +4,9 @@
 
 #### Verilog Code
 
-![](c1 (1).png)
+![](c11.png)
 
-![c1 (2)](c1 (2).png)
+![](c12.png)
 
 #### RTL Schematic Screen shot
 
@@ -32,21 +32,21 @@ How to change the refresh rate? **From Ip catalog and in the fpga features and c
 
 #### Verilog Code
 
-![](c2 (1).png)
+![](c21.png)
 
-![c2 (2)](c2 (2).png)
+![c22](c22.png)
 
-![c2 (3)](c2 (3).png)
+![c23](c23.png)
 
-![c2 (4)](c2 (4).png)
+![c24](c24.png)
 
-![c2 (5)](c2 (5).png)
+![c25](c25.png)
 
-![c2 (6)](c2 (6).png)
+![c26](c26.png)
 
-![c2 (7)](c2 (7).png)
+![c27](c27.png)
 
-![c2 (8)](c2 (8).png)
+![c28](c28.png)
 
 #### RTL Schematic Screen shot
 
@@ -72,15 +72,15 @@ How does it change 5MHz to 500 Hz? **with the divider which is reg[12:0] count c
 
 #### Verilog Code
 
-![](c3 (1).png)
+![](c31.png)
 
-![c3 (2)](c3 (2).png)
+![c32](c32.png)
 
-![c3 (3)](c3 (3).png)
+![c33](c33.png)
 
-![c3 (4)](c3 (4).png)
+![c34](c34.png)
 
-![c3 (5)](c3 (5).png)
+![c35](c35.png)
 
 #### RTL Schematic Screen shot
 
