@@ -2,3 +2,6 @@ Running: xsim.dir/mult_3x3_behav/xsimk.exe -simmode gui -wdb mult_3x3_behav.wdb 
 Design successfully loaded
 Design Loading Memory Usage: 5612 KB (Peak: 5612 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6264 KB (Peak: 6264 KB)
+Simulation CPU Usage: 15 ms
