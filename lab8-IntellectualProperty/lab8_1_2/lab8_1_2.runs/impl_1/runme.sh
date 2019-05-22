@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.runs/impl_1'
+HD_PWD='C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log binary2bcd_on_2_7segment.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source binary2bcd_on_2_7segment.tcl -notrace
 
 

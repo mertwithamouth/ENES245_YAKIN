@@ -61,13 +61,102 @@ proc step_failed { step } {
 }
 
 
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  create_project -in_memory -part xc7a100tcsg324-1
+  set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/wt} [current_project]
+  set_property parent.project_path {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.xpr} [current_project]
+  set_property ip_output_repo {{C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/ip}} [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  add_files -quiet {{C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.runs/synth_1/binary2bcd_on_2_7segment.dcp}}
+  read_ip -quiet {{c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_5MHz/clk_5MHz.xci}}
+  read_xdc {{C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/Nexys4DDR_Master.xdc}}
+  link_design -top binary2bcd_on_2_7segment -part xc7a100tcsg324-1
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force binary2bcd_on_2_7segment_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file binary2bcd_on_2_7segment_drc_opted.rpt -pb binary2bcd_on_2_7segment_drc_opted.pb -rpx binary2bcd_on_2_7segment_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force binary2bcd_on_2_7segment_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file binary2bcd_on_2_7segment_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file binary2bcd_on_2_7segment_utilization_placed.rpt -pb binary2bcd_on_2_7segment_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file binary2bcd_on_2_7segment_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force binary2bcd_on_2_7segment_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file binary2bcd_on_2_7segment_drc_routed.rpt -pb binary2bcd_on_2_7segment_drc_routed.pb -rpx binary2bcd_on_2_7segment_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file binary2bcd_on_2_7segment_methodology_drc_routed.rpt -pb binary2bcd_on_2_7segment_methodology_drc_routed.pb -rpx binary2bcd_on_2_7segment_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file binary2bcd_on_2_7segment_power_routed.rpt -pb binary2bcd_on_2_7segment_power_summary_routed.pb -rpx binary2bcd_on_2_7segment_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file binary2bcd_on_2_7segment_route_status.rpt -pb binary2bcd_on_2_7segment_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file binary2bcd_on_2_7segment_timing_summary_routed.rpt -pb binary2bcd_on_2_7segment_timing_summary_routed.pb -rpx binary2bcd_on_2_7segment_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file binary2bcd_on_2_7segment_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file binary2bcd_on_2_7segment_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file binary2bcd_on_2_7segment_bus_skew_routed.rpt -pb binary2bcd_on_2_7segment_bus_skew_routed.pb -rpx binary2bcd_on_2_7segment_bus_skew_routed.rpx"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force binary2bcd_on_2_7segment_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param xicom.use_bs_reader 1
-  open_checkpoint binary2bcd_on_2_7segment_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/Mert Akin/Documents/GITHUB/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/wt} [current_project]
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
   catch { write_mem_info -force binary2bcd_on_2_7segment.mmi }
   write_bitstream -force binary2bcd_on_2_7segment.bit 
   catch {write_debug_probes -quiet -force binary2bcd_on_2_7segment}

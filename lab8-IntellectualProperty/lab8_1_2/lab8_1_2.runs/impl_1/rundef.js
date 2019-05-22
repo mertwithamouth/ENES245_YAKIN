@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 // pre-commands:
-ISETouchFile( "write_bitstream", "begin" );
+ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
          "-log binary2bcd_on_2_7segment.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source binary2bcd_on_2_7segment.tcl -notrace" );
 

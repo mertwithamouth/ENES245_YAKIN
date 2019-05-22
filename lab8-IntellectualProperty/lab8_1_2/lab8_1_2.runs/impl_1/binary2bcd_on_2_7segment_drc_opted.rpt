@@ -1,13 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Tue May 14 16:22:04 2019
+| Date         : Thu May 16 13:34:23 2019
 | Host         : DESKTOP-45TA9LH running 64-bit major release  (build 9200)
 | Command      : report_drc -file binary2bcd_on_2_7segment_drc_opted.rpt -pb binary2bcd_on_2_7segment_drc_opted.pb -rpx binary2bcd_on_2_7segment_drc_opted.rpx
 | Design       : binary2bcd_on_2_7segment
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
-| Design State : Fully Routed
+| Design State : Synthesized
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Report DRC

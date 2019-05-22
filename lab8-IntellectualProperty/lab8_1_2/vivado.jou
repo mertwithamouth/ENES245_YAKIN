@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu May 16 13:22:04 2019
+# Process ID: 18628
+# Current directory: C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9464 C:\Users\Mert Akin\Documents\GITHUB\ENES245_YAKIN\lab8-IntellectualProperty\lab8_1_2\lab8_1_2.xpr
+# Log file: C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/vivado.log
+# Journal file: C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}] -no_script -reset -force -quiet
+remove_files  -fileset clk_wiz_0 {{C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci}}
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_5MHz -dir {c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip}
+set_property -dict [list CONFIG.Component_Name {clk_5MHz} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {5} CONFIG.MMCM_DIVCLK_DIVIDE {5} CONFIG.MMCM_CLKFBOUT_MULT_F {32.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {128.000} CONFIG.CLKOUT1_JITTER {631.442} CONFIG.CLKOUT1_PHASE_ERROR {346.848}] [get_ips clk_5MHz]
+generate_target {instantiation_template} [get_files {{c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_5MHz/clk_5MHz.xci}}]
+update_compile_order -fileset sources_1
+generate_target all [get_files  {{c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_5MHz/clk_5MHz.xci}}]
+catch { config_ip_cache -export [get_ips -all clk_5MHz] }
+export_ip_user_files -of_objects [get_files {{c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_5MHz/clk_5MHz.xci}}] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] {{c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_5MHz/clk_5MHz.xci}}]
+export_simulation -of_objects [get_files {{c:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.srcs/sources_1/ip/clk_5MHz/clk_5MHz.xci}}] -directory {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.ip_user_files} -ipstatic_source_dir {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/compile_simlib/modelsim} {questa=C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/compile_simlib/questa} {riviera=C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/compile_simlib/riviera} {activehdl=C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.runs/impl_1/binary2bcd_on_2_7segment.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/Mert Akin/Documents/GITHUB/ENES245_YAKIN/lab8-IntellectualProperty/lab8_1_2/lab8_1_2.runs/impl_1/binary2bcd_on_2_7segment.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+synth_design -rtl -name rtl_1
+open_run synth_1 -name synth_1
